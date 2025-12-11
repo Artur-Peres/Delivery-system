@@ -23,8 +23,6 @@ public class App {
 
         Grafo grafo = new Grafo(16);
 
-        // Criando as conexões das ruas (arestas)
-        // Rua 1
         grafo.criarAresta(inicio, rua2, 16);
         grafo.criarAresta(inicio, rua8, 14);
         grafo.criarAresta(inicio, rua9, 12);
