@@ -17,7 +17,7 @@ public class Grafo {
              vertices[noOrigem][noDestino]= peso;
              vertices[noDestino][noOrigem]= peso;
          } else {
-             throw new InvalidParameterException("O peso do nó origem ["+noOrigem+"] para o nó destino ["+noDestino+"] não deve ser negativo!");
+             System.out.println("O peso do nó origem ["+noOrigem+"] para o nó destino ["+noDestino+"] não deve ser negativo!");
          }
      }
 
@@ -54,7 +54,7 @@ public class Grafo {
 
         custo[noOrigem]= 0;
 
-        for (int v= 0; v< vertices.length; v++){
+        for (int v= 1; v< vertices.length; v++){
             if (v != noOrigem){
                 custo[v]= Integer.MAX_VALUE;
             }
@@ -85,7 +85,6 @@ public class Grafo {
         while (antecessor[noMaisPerto]!= -1){
             caminho.add(antecessor[noMaisPerto]);
             noMaisPerto= antecessor[noMaisPerto];
-
         }
         Collections.reverse(caminho);
         return caminho;
